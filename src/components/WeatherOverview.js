@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 function WeatherOverview({ temp, feels_like, weather }) {
-  console.log(weather);
   let weatherIcon =
     'http://openweathermap.org/img/w/' + weather[0].icon + '.png';
   return (
@@ -31,6 +30,7 @@ export default WeatherOverview;
 const Wrapper = styled.div`
   padding: 20px;
   max-width: 600px;
+  min-width: 500px;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;

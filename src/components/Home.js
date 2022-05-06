@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import WeatherOverview from './WeatherOverview';
 import styled from 'styled-components';
+import DailyForecast from './DailyForecast';
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ function Home() {
     return (
       <Wrapper>
         <WeatherOverview {...posts.current} />
+        <DailyForecast {...posts.daily} />
         <WeatherOverview {...posts.current} />
         <WeatherOverview {...posts.current} />
       </Wrapper>
@@ -38,10 +40,10 @@ function Home() {
 export default Home;
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: rgb(94, 187, 226);
   padding: 50px;
-  height: 100%;
+  min-height: 100vh;
 `;
