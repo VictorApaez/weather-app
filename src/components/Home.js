@@ -3,6 +3,7 @@ import axios from 'axios';
 import WeatherOverview from './WeatherOverview';
 import styled from 'styled-components';
 import DailyForecast from './DailyForecast';
+import HourlyForecast from './HourlyForecast';
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -30,9 +31,8 @@ function Home() {
     return (
       <Wrapper>
         <WeatherOverview {...posts.current} />
+        <HourlyForecast {...posts.hourly} />
         <DailyForecast {...posts.daily} />
-        <WeatherOverview {...posts.current} />
-        <WeatherOverview {...posts.current} />
       </Wrapper>
     );
 }
@@ -44,6 +44,5 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   background-color: rgb(94, 187, 226);
-  padding: 50px;
   min-height: 100vh;
 `;

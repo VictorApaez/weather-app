@@ -28,9 +28,8 @@ function WeatherOverview({ temp, feels_like, weather }) {
 export default WeatherOverview;
 
 const Wrapper = styled.div`
-  padding: 20px;
+  width: 100%;
   max-width: 600px;
-  min-width: 500px;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -42,7 +41,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
 `;
 const Location = styled.h2``;
 const Temperature = styled.h1`
