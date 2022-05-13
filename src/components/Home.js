@@ -43,6 +43,15 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  background-color: rgb(94, 187, 226);
+  background-color: #14397d;
   min-height: 100vh;
+
+  & > div {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+    margin: 20px;
+  }
 `;

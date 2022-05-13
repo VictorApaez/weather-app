@@ -46,19 +46,20 @@ export default DailyForecast;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #77b5d9;
+  padding: 10px;
 `;
 
 const Temp = styled.div`
   display: flex;
+  justify-content: space-between;
+  width: 120px;
 `;
 const WeekDay = styled.div`
-  /* margin: 5px;
-  padding: 5px; */
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 0 10px;
+  margin: 5px;
   display: flex;
   justify-content: space-between;
 `;

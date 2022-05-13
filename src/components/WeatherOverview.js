@@ -28,23 +28,21 @@ function WeatherOverview({ temp, feels_like, weather }) {
 export default WeatherOverview;
 
 const Wrapper = styled.div`
-  width: 100%;
-  max-width: 600px;
-  background-color: rgba(0, 0, 0, 0.3);
+  padding: 40px 0;
+  background-color: #d7eaf3;
   display: flex;
   align-items: center;
   flex-direction: column;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 const Location = styled.h2``;
 const Temperature = styled.h1`
-  font-size: 3.5rem;
+  margin-right: 30px;
+  font-size: 6rem;
 `;
 const Description = styled.div``;
 const Skies = styled.p``;

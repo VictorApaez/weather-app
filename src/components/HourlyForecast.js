@@ -5,6 +5,7 @@ function HourlyForecast(dataSet) {
   const data = Object.values(dataSet);
   const d = new Date();
   const h = d.getHours();
+
   console.log(data);
   return (
     <>
@@ -20,6 +21,13 @@ function HourlyForecast(dataSet) {
                   {(hour + i) % 12 == 0 ? 12 : (hour + i) % 12}
                   {pmam}
                 </h1>
+                <img
+                  src={
+                    'http://openweathermap.org/img/w/' +
+                    item.weather[0].icon +
+                    '.png'
+                  }
+                ></img>
                 <h1>
                   {Math.round(data[i].temp)}
                   {'\u00b0'}
@@ -38,15 +46,29 @@ export default HourlyForecast;
 const Wrapper = styled.div`
   display: flex;
   overflow-x: scroll;
-  width: 100%;
-  max-width: 600px;
-  background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #77b5d9;
+  &::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background-color: #d7eaf3;
+    border-radius: 0 0 10px 10px;
+  }
+  &::-webkit-scrollbar-thumb:horizontal {
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
 `;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px;
+  margin: 10px;
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 100px;
 `;
+
+// #d7eaf3
+// #77b5d9
+// #14397d
