@@ -53,7 +53,7 @@ const Wrapper = styled.div`
 const Temp = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  /* width: 120px; */
 `;
 const WeekDay = styled.div`
   background-color: rgb(0, 0, 0, 0.1);

@@ -4,6 +4,7 @@ import WeatherOverview from './WeatherOverview';
 import styled from 'styled-components';
 import DailyForecast from './DailyForecast';
 import HourlyForecast from './HourlyForecast';
+import Loading from './Loading';
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -25,8 +26,9 @@ function Home() {
     };
     loadPost();
   }, []);
-  if (loading == true) {
-    return <h1>The data is loading</h1>;
+  if (loading) {
+    // console.log('loading component');
+    return <Loading />;
   } else
     return (
       <Wrapper>
